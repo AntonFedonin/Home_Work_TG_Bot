@@ -116,7 +116,9 @@ def handle_message(msg):
 
     # Выход
     if msg.text == button6.text:
-        bot.send_message(chat_id, 'До новых встреч!')
+        bot.send_message(chat_id, 'До новых встреч!\n'
+                                  'Соскучишься - жми')
+        bot.send_message(msg.chat.id, '/start', reply_markup=types.ReplyKeyboardRemove())
 
 
 def add_todo_into_list(message):
